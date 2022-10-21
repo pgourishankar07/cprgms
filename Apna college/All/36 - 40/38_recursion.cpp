@@ -75,7 +75,7 @@ int fib(int n) {
 int main() {
 
   int n;
-  cout << "ENter range : ";
+  cout << "Enter range : ";
   cin >> n;
 
   cout << "Fibonacci Series : \n";

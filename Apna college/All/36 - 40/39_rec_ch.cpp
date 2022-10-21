@@ -7,10 +7,11 @@ using namespace std;
 
 //     if (n == 1) {
 //         return true;
+//     }else{
+
+//     return (arr[0] < arr[1] && check(arr + 1, n - 1));
 //     }
 
-//     bool pre = check(arr + 1, n - 1);
-//     return (arr[0] < arr[1] && pre);
 // }
 
 // int main() {
@@ -21,22 +22,22 @@ using namespace std;
 
 // _________print number till n___________
 
-// int dec(int n) {
-//     cout << n << endl;
+// void dec(int n) {
 //     if (n == 0) {
-//         return 0;
+//         return;
+//     } else {
+//         cout << n << endl;
+//         dec(n - 1);
 //     }
-//     int pre = dec(n - 1);
-//     return n;
 // }
 
-// int inc(int n) {
+// void inc(int n) {
 //     if (n == 0) {
-//         return 0;
+//         return;
+//     } else {
+//         inc(n - 1);
+//         cout << n << endl;
 //     }
-//     int pre = inc(n - 1);
-//     cout << n << endl;
-//     return n;
 // }
 
 // int main() {
@@ -53,21 +54,21 @@ using namespace std;
 int foccur(int arr[], int n, int i, int key) {
     if (i == n) {
         return i;
-    }
-    if (arr[i] == key) {
+    } else if (arr[i] == key) {
         return i;
+    } else {
+        return foccur(arr, n, i + 1, key);
     }
-    return foccur(arr, n, i + 1, key);
 }
 
 int loccur(int arr[], int n, int i, int key) {
     if (i == 0) {
         return 0;
-    }
-    if (arr[i] == key) {
+    } else if (arr[i] == key) {
         return i;
+    } else {
+        return foccur(arr, n, i - 1, key);
     }
-    return foccur(arr, n, i - 1, key);
 }
 
 #include <iostream>
@@ -79,7 +80,7 @@ int main() {
     cout << "Enter a number : ";
     cin >> key;
     cout << "First occurence : " << foccur(arr, s, index, key) << endl;
-    index = s;
+    index = s - 1;
     cout << "Second occurrence : " << loccur(arr, s, index, key);
 
     return 0;

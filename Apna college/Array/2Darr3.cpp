@@ -29,7 +29,7 @@ int main() {
             cin >> arr2[i][j];
         }
     }
-    cout << "the 2st matrix is:" << endl;
+    cout << "the 2nd matrix is:" << endl;
     for (int i = 0; i < r; i++) {
         for (int j = 0; j < c; j++) {
             cout << arr2[i][j] << " ";
