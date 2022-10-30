@@ -89,5 +89,6 @@ int main() {
     // rev(stri, i);
     // cout << lax_my("ppipxpxpi");
     sub("ABC", "");
+
     return 0;
 }

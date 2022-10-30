@@ -42,7 +42,9 @@ void inc(int n) {
 }
 int main() {
     int arr[] = {2, 2, 3, 2, 3};
-    cout << fila(arr, 2, 5, 4);
+    // cout << fila(arr, 2, 5, 4);
+    string s = "ABC";
+    cout << s.substr(3);
     return 0;
 }
 
