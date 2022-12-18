@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std; // factorial of a number
+using namespace std; // factorial of a number by gourishankar
 
 void fact(int n) {
     int f = 1;
