@@ -81,6 +81,7 @@ void del(node *head, int key) {
             return;
         }
         prev->next = temp->next;
+
         delete temp;
     }
 }
