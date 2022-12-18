@@ -53,13 +53,12 @@ void intail(node *&head, int val) {
 
 void display(node *head) { // Pass by pointer arguements
     node *temp = head;
-    cout << "The Initial linked list created : ";
 
     while (temp != NULL) {
-        cout << temp->data << " ";
+        cout << temp->data << " --> ";
         temp = temp->next;
     }
-    cout << endl;
+    cout << " NULL " << endl;
 }
 
 // _______________________DELETE______________________
@@ -96,5 +95,50 @@ int main() {
     display(head);
     del(head, 2);
     display(head);
+    int f = 1;
+    while (f == 1) {
+        cout << "_________________________________" << endl
+             << "1.Inserting at head" << endl
+             << "2.Inserting in betweeen" << endl
+             << "3.Inserting at end" << endl
+             << "4.Display Linked list" << endl
+             << "5.Delete an Element " << endl
+             << "6.Exit" << endl
+             << "_________________________________" << endl;
+        int ch;
+        cout << "Enter option number : ";
+        cin >> ch;
+        if (ch == 1) {
+            int d;
+            cout << "Enter data : ";
+            cin >> d;
+            inhead(head, d);
+        } else if (ch == 2) {
+            int d, k;
+            cout << "Enter data : ";
+            cin >> d;
+            cout << "Enter previous Element : ";
+            cin >> k;
+            inbtwn(head, k, d);
+        } else if (ch == 3) {
+            int d;
+            cout << "Enter data : ";
+            cin >> d;
+            intail(head, d);
+        } else if (ch == 4) {
+            display(head);
+
+        } else if (ch == 5) {
+            int d;
+            cout << "Enter data to be deleted : ";
+            cin >> d;
+            del(head, d);
+        } else if (ch == 6) {
+            cout << "Exit....";
+            f = 0;
+        } else {
+            cout << "Invalid option ... !";
+        }
+    }
     return 0;
 }

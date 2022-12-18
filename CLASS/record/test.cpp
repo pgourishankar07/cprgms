@@ -53,13 +53,49 @@ void intail(node *&head, int val) {
 
 void display(node *head) { // Pass by pointer arguements
     node *temp = head;
-    cout << "The linked list  : ";
-
     while (temp != NULL) {
-        cout << temp->data << " --> ";
+        cout << temp->data << " ";
         temp = temp->next;
     }
-    cout << "NULL" << endl;
+    cout << endl;
+}
+
+// ____________________SEARCH______________________
+
+void srch(node *head, int key) {
+    node *temp = head;
+    while (temp->data != key) {
+        temp = temp->next;
+        if (temp == NULL) {
+            cout << "Element not found" << endl;
+            return;
+        }
+    }
+    cout << "Element Found in the linked list" << endl;
+}
+
+// _______________________DELETE______________________
+
+void del(node *head, int key) {
+    node *temp = head;
+    node *prev = NULL;
+
+    if (temp->data == key) {
+        head = temp->next;
+        delete temp;
+        return;
+    } else {
+        while (temp != NULL && temp->data != key) {
+            prev = temp;
+            temp = temp->next;
+        }
+        if (temp == NULL) {
+            cout << "ELement not found to delete" << endl;
+            return;
+        }
+        prev->next = temp->next;
+        delete temp;
+    }
 }
 
 int main() {
@@ -67,10 +103,12 @@ int main() {
     intail(head, 1);
     intail(head, 2);
     intail(head, 3);
-    display(head);
     inhead(head, 5);
-    display(head);
     inbtwn(head, 1, 8);
+    cout << "The Initial linked list created : ";
+    display(head);
+    srch(head, 8);
+    del(head, 2);
     display(head);
     int f = 1;
     while (f == 1) {
@@ -79,7 +117,9 @@ int main() {
              << "2.Inserting in betweeen" << endl
              << "3.Inserting at end" << endl
              << "4.Display Linked list" << endl
-             << "5.Exit" << endl
+             << "5.Search an Element" << endl
+             << "6.Delete an Element " << endl
+             << "7.Exit" << endl
              << "_________________________________" << endl;
         int ch;
         cout << "Enter option number : ";
@@ -105,11 +145,22 @@ int main() {
             display(head);
 
         } else if (ch == 5) {
+            int k;
+            cout << "Enter Element to search : ";
+            cin >> k;
+            srch(head, k);
+        } else if (ch == 6) {
+            int d;
+            cout << "Enter data to be deleted : ";
+            cin >> d;
+            del(head, d);
+        } else if (ch == 7) {
             cout << "Exit....";
             f = 0;
         } else {
             cout << "Invalid option ... !";
         }
     }
+
     return 0;
 }
