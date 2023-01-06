@@ -1,5 +1,6 @@
-#include <iostream>
-#include <string> //contains all string functions
+#include <bits/stdc++.h>
+// #include <iostream>
+// #include <string> //contains all string functions
 
 using namespace std;
 int main() {
