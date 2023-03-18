@@ -23,11 +23,8 @@ int partition(int arr[], int l, int r) {
 void quickSort(int arr[], int l, int r) {
     if (l < r) {
         int pi = partition(arr, l, r);
-        // cout << "____1";
         quickSort(arr, l, pi - 1);
-        // cout << "____2";
         quickSort(arr, pi + 1, r);
-        // cout << "____3";
     }
 }
 
