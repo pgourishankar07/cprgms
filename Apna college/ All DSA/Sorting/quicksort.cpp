@@ -23,17 +23,21 @@ int partition(int arr[], int l, int r) {
 void quickSort(int arr[], int l, int r) {
     if (l < r) {
         int pi = partition(arr, l, r);
+        // cout << "____1";
         quickSort(arr, l, pi - 1);
+        // cout << "____2";
         quickSort(arr, pi + 1, r);
+        // cout << "____3";
     }
 }
 
 int main() {
-    int arr[5] = {5, 4, 3, 2, 1};
-    quickSort(arr, 0, 4);
+    int arr[7] = {6, 3, 9, 5, 2, 8, 7};
+    int size = (sizeof(arr)) / (sizeof(arr[0]));
+    quickSort(arr, 0, size - 1);
 
     cout << "The sorted array is : " << endl;
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < size; i++) {
         cout << arr[i] << " ";
     }
     cout << endl;
