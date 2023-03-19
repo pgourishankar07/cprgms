@@ -7,7 +7,7 @@ if a[i]>a[j] and i<j
 using namespace std;
 int main() {
     int arr[8] = {
-        6, 3, 9, 5, 2, 8, 7, 1};
+        6, 3, 9, 5, 2, 8, 7, 1}; // inversions are : (3,1),32,51,52,61,62,91,92,97,98
     int n = 8;
     int inv = 0;
     for (int i = 0; i < n; i++) {
