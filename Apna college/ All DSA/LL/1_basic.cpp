@@ -1,5 +1,3 @@
-
-
 #include <iostream>
 using namespace std;
 
@@ -13,13 +11,15 @@ public:
 // starting from the given node
 void printList(Node *n) {
   while (n != NULL) {
-    cout << n->data << " ";
+    cout << n->data << " -> ";
     n = n->next;
   }
+  cout << "NULL";
 }
 
 // Driver's code
 int main() {
+  // declares three pointers to Node objects, and initializes them to NULL
   Node *head = NULL;
   Node *second = NULL;
   Node *third = NULL;
