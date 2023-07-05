@@ -19,10 +19,10 @@ void printList(Node *n) {
 
 // Driver's code
 int main() {
-  // declares three pointers to Node objects, and initializes them to NULL
-  Node *head = NULL;
-  Node *second = NULL;
-  Node *third = NULL;
+  // declares three pointers to Node objects, and initializes them to NULL or 0 as value of the data(eg:Node *head=NULL;)
+  Node *head;
+  Node *second;
+  Node *third;
 
   // allocate 3 nodes in the heap
   head = new Node();
@@ -35,7 +35,7 @@ int main() {
   second->data = 2; // assign data to second node
   second->next = third;
 
-  third->data = 3; // assign data to third node
+  // third->data = 3; // assign data to third node
   third->next = NULL;
 
   // Function call

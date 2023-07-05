@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-// #include <iostream>
+// #include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 void fact(int n) {
