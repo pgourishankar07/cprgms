@@ -2,17 +2,14 @@
 using namespace std;
 int main() {
 
-    int a = 5;
-    int *aptr = &a;
+  int a = 5;
+  int *aptr = &a;
 
-    //    *aptr -------a ------ value of a
-    //    aptr  -------&a ----- address of a
+  //    *aptr -------a ------ value of a
+  //    aptr  -------&a ----- address of a
 
-    cout << aptr << endl
-         << *aptr << endl
-         << a << endl
-         << &a;
-    return 0;
+  cout << aptr << endl << *aptr << endl << a << endl << &a;
+  return 0;
 }
 
 /*

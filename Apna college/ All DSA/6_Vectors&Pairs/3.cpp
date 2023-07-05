@@ -1,9 +1,9 @@
 //             Question : Vector and pair 48 th video
 /*
 // my answer
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 int main() {
     vector<int> v1;
@@ -38,48 +38,29 @@ int main() {
 
 */
 
-//Apna college answer
+// Apna college answer
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 int main() {
-    int arr[] ={10,16,7,14,5,3,2,9};
-    vector<pair<int,int>> v;
-    for(int i =0;i<(sizeof(arr)/sizeof(arr[0]));i++){
-        pair<int,int> p;
-        p.first = arr[i];
-        p.second = i;
-        v.push_back(p);
-    }
-    sort(v.begin(),v.end());
-    // for (auto i:v){
-    //     cout<<i.second<<"  ";
-    // }
-    for(int i =0;i<v.size();i++){
-        arr[v[i].second]= i;
-    }
-    for(int i =0;i<v.size();i++){
-        cout<<arr[i]<<"  ";
-    }
-    return 0;
+  int arr[] = {10, 16, 7, 14, 5, 3, 2, 9};
+  vector<pair<int, int>> v;
+  for (int i = 0; i < (sizeof(arr) / sizeof(arr[0])); i++) {
+    pair<int, int> p;
+    p.first = arr[i];
+    p.second = i;
+    v.push_back(p);
+  }
+  sort(v.begin(), v.end());
+  // for (auto i:v){
+  //     cout<<i.second<<"  ";
+  // }
+  for (int i = 0; i < v.size(); i++) {
+    arr[v[i].second] = i;
+  }
+  for (int i = 0; i < v.size(); i++) {
+    cout << arr[i] << "  ";
+  }
+  return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

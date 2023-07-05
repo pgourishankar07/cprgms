@@ -13,7 +13,6 @@ int main() {
   obj.a = 5;
   cout << obj.a << endl;
   cout << ptr->a; // Accessing member with pointer
-  cout << endl
-       << ptr;
+  cout << endl << ptr;
   return 0;
 }

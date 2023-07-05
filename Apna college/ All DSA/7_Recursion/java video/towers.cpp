@@ -5,12 +5,14 @@ void towersOfHanoi(int n, string src, string help, string dest) {
 
   if (n == 1) {
 
-    cout << "______________Disk transfer " << n << " from " << src << " to " << dest << endl;
+    cout << "______________Disk transfer " << n << " from " << src << " to "
+         << dest << endl;
     return;
   }
 
   towersOfHanoi(n - 1, src, dest, help);
-  cout << "______________Disk transfer " << n << " from " << src << " to " << dest << endl;
+  cout << "______________Disk transfer " << n << " from " << src << " to "
+       << dest << endl;
   towersOfHanoi(n - 1, help, src, dest);
 }
 

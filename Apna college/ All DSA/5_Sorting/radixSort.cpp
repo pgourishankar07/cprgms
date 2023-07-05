@@ -10,7 +10,8 @@ int maxof(int arr[], int n) { // find maximum element in that array
   }
   return maxi;
 }
-// __________________________COUNT SORT ______________________________________________
+// __________________________COUNT SORT
+// ______________________________________________
 
 void countSrt(int arr[], int n, int div) {
   int output[n];
@@ -26,11 +27,13 @@ void countSrt(int arr[], int n, int div) {
     output[count[(arr[i] / div) % 10] - 1] = arr[i];
     count[(arr[i] / div) % 10]--;
   }
-  for (int i = 0; i < n; i++) { // copying the output values into the original array
+  for (int i = 0; i < n;
+       i++) { // copying the output values into the original array
     arr[i] = output[i];
   }
 }
-// _____________________________Radix SORT ______________________________________________
+// _____________________________Radix SORT
+// ______________________________________________
 
 void radixSrt(int arr[], int n) {
   int maxNum = maxof(arr, n);

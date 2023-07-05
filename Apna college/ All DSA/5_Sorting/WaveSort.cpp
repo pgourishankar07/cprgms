@@ -28,7 +28,8 @@ int main() {
     if (arr[i] > arr[i - 1]) {
       swap(arr, i, i - 1);
     }
-    if (arr[i] > arr[i + 1] && i <= n - 2) { // go upto 2 elements before the last index
+    if (arr[i] > arr[i + 1] &&
+        i <= n - 2) { // go upto 2 elements before the last index
       swap(arr, i, i + 1);
     }
   }

@@ -2,7 +2,8 @@
 #include <string>
 using namespace std;
 
-bool map[26] = {false}; // creating an array of false for 26 times alll aphabets size
+bool map[26] = {
+    false}; // creating an array of false for 26 times alll aphabets size
 
 void removeDupli(string str, int i, string newStr) {
 

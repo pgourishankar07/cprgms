@@ -24,7 +24,8 @@ void myincexc() {
       c3++;
     }
   }
-  cout << "The no. of numbers which are  divisible by " << a << " or " << b << " are : \n"
+  cout << "The no. of numbers which are  divisible by " << a << " or " << b
+       << " are : \n"
        << (c1 + c2) - c3;
 }
 // __________apni kaksha methd______________

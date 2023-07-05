@@ -2,7 +2,8 @@
 #include <string>
 using namespace std;
 
-string keypad[] = {".", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vw", "xyz"};
+string keypad[] = {".",   "abc",  "def", "ghi", "jkl",
+                   "mno", "pqrs", "tu",  "vw",  "xyz"};
 
 void keypattern(string str, int i, string combi) {
   if (i == str.length()) {

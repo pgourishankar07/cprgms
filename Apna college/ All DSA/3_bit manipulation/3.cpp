@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-// _____________to find a unique no. in an array(where all no. except 1 are present wice)___________
+// _____________to find a unique no. in an array(where all no. except 1 are
+// present wice)___________
 
 // int unique(int arr[], int n) {
 //     int xorsum = 0;
@@ -16,7 +17,8 @@ using namespace std;
 //     return 0;
 // }
 
-// _____________to find two unique no. in an array(where all no. except two, are present twice)___________
+// _____________to find two unique no. in an array(where all no. except two, are
+// present twice)___________
 
 // int setBit(int n, int pos) {
 //     return ((n & (1 << pos)) != 0);
@@ -53,32 +55,29 @@ using namespace std;
 //     return 0;
 // }
 
-// _____________to find two unique no. in an array(where all no. except one, are present thrice)___________
+// _____________to find two unique no. in an array(where all no. except one, are
+// present thrice)___________
 
-int getBit(int n, int pos) {
-    return ((n & (1 << pos)) != 0);
-}
-int setBit(int n, int pos) {
-    return (n | (1 << pos));
-}
+int getBit(int n, int pos) { return ((n & (1 << pos)) != 0); }
+int setBit(int n, int pos) { return (n | (1 << pos)); }
 
 int unique3(int arr[], int n) {
-    int result = 0;
-    for (int i = 0; i < 64; i++) {
-        int sum = 0;
-        for (int j = 0; j < n; j++) {
-            if (getBit(arr[j], i)) {
-                sum++;
-            }
-        }
-        if (sum % 3 != 0) {
-            result = setBit(result, i);
-        }
+  int result = 0;
+  for (int i = 0; i < 64; i++) {
+    int sum = 0;
+    for (int j = 0; j < n; j++) {
+      if (getBit(arr[j], i)) {
+        sum++;
+      }
     }
-    return result;
+    if (sum % 3 != 0) {
+      result = setBit(result, i);
+    }
+  }
+  return result;
 }
 
 int main() {
-    int arr[] = {1, 2, 3, 4, 1, 2, 3, 1, 2, 3};
-    cout << unique3(arr, 10) << endl;
+  int arr[] = {1, 2, 3, 4, 1, 2, 3, 1, 2, 3};
+  cout << unique3(arr, 10) << endl;
 }

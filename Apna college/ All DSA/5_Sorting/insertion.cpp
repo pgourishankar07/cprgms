@@ -1,4 +1,5 @@
-// ________INSERTION SORT________(insert an element from unsorted array to its correct position in sorted array)
+// ________INSERTION SORT________(insert an element from unsorted array to its
+// correct position in sorted array)
 
 #include <iostream>
 using namespace std;
@@ -18,8 +19,7 @@ int main() {
     cout << arr[i] << " ";
   }
 
-  cout << endl
-       << "Sorted list is :" << endl;
+  cout << endl << "Sorted list is :" << endl;
 
   for (int i = 1; i < n; i++) {
     for (int j = 0; j < i; j++) {

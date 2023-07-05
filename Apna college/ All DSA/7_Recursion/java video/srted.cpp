@@ -16,7 +16,6 @@ int main() {
   int arr[] = {1, 5, 3, 4};
   int i = 0;
   int size = sizeof(arr) / sizeof(arr[0]);
-  cout
-      << isSrt(arr, i, i + 1, size);
+  cout << isSrt(arr, i, i + 1, size);
   return 0;
 }

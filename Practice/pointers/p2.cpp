@@ -3,9 +3,7 @@ using namespace std;
 class Data {
 public:
   int a;
-  void print() {
-    cout << "a is " << a;
-  }
+  void print() { cout << "a is " << a; }
 };
 
 int main() {

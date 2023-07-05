@@ -4,7 +4,9 @@
 #include <unordered_set>
 using namespace std;
 
-void subSeq(string str, int i, string newStr, unordered_set<string> &myset) { //& passing the original set where changes made
+void subSeq(string str, int i, string newStr,
+            unordered_set<string>
+                &myset) { //& passing the original set where changes made
   if (i == str.length()) {
     if (myset.find(newStr) != myset.end()) {
       return;

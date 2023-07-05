@@ -52,36 +52,36 @@ using namespace std;
 // ___________find the first and last occurence of a number in array____
 
 int foccur(int arr[], int n, int i, int key) {
-    if (i == n) {
-        return i;
-    } else if (arr[i] == key) {
-        return i;
-    } else {
-        return foccur(arr, n, i + 1, key);
-    }
+  if (i == n) {
+    return i;
+  } else if (arr[i] == key) {
+    return i;
+  } else {
+    return foccur(arr, n, i + 1, key);
+  }
 }
 
 int loccur(int arr[], int n, int i, int key) {
-    if (i == 0) {
-        return 0;
-    } else if (arr[i] == key) {
-        return i;
-    } else {
-        return foccur(arr, n, i - 1, key);
-    }
+  if (i == 0) {
+    return 0;
+  } else if (arr[i] == key) {
+    return i;
+  } else {
+    return foccur(arr, n, i - 1, key);
+  }
 }
 
 #include <iostream>
 using namespace std;
 int main() {
-    int arr[] = {5, 2, 3, 4, 5};
-    int s = sizeof(arr) / sizeof(arr[0]);
-    int index = 0, key;
-    cout << "Enter a number : ";
-    cin >> key;
-    cout << "First occurence : " << foccur(arr, s, index, key) << endl;
-    index = s - 1;
-    cout << "Second occurrence : " << loccur(arr, s, index, key);
+  int arr[] = {5, 2, 3, 4, 5};
+  int s = sizeof(arr) / sizeof(arr[0]);
+  int index = 0, key;
+  cout << "Enter a number : ";
+  cin >> key;
+  cout << "First occurence : " << foccur(arr, s, index, key) << endl;
+  index = s - 1;
+  cout << "Second occurrence : " << loccur(arr, s, index, key);
 
-    return 0;
+  return 0;
 }

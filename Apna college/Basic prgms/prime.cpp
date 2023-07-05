@@ -36,24 +36,24 @@ int main() {
 
 bool isprime(int num) {
 
-    for (int j = 2; j < num; j++) {
-        if (num % j == 0) {
-            return false;
-        }
+  for (int j = 2; j < num; j++) {
+    if (num % j == 0) {
+      return false;
     }
-    return true;
+  }
+  return true;
 }
 
 int main() {
-    int s, b;
-    cout << "Enter minimum range : ";
-    cin >> s;
-    cout << "Enter maximum range : ";
-    cin >> b;
+  int s, b;
+  cout << "Enter minimum range : ";
+  cin >> s;
+  cout << "Enter maximum range : ";
+  cin >> b;
 
-    for (int i = s; i <= b; i++) {
-        if (isprime(i) && i != 1) {
-            cout << i << endl;
-        }
+  for (int i = s; i <= b; i++) {
+    if (isprime(i) && i != 1) {
+      cout << i << endl;
     }
+  }
 }
