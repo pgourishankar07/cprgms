@@ -25,6 +25,7 @@ string lax(string s) {
 }
 void dec(int n, int m) {
     if (m == n) {
+
         return;
     } else {
         cout << m << endl;
