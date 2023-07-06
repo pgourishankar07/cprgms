@@ -2,7 +2,7 @@
 using namespace std;
 
 class node {
-public:
+  public:
   int data;
   node *next;
   node(int val) {
@@ -12,7 +12,7 @@ public:
 };
 
 class queue {
-public:
+  public:
   node *front;
   node *back;
 
